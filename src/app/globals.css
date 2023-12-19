@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: #252525;
+    text: white,
+  }
+
+section.hero{
+  @apply grid;
+  grid-template-columns: .4fr .6r;
+}
+
+.card-style{
+  background-color: #252525;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5),-5px -5px 15px 0px rgba(255, 255, 255, 0.1);
+}
+
+.card-style2{
+  background-color: #ffc600;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5),-5px -5px 15px 0px rgba(255, 255, 255, 0.1);
+}
+
+.hover-instagram{
+  background: linear-gradient(#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.hover-whatsapp{
+  background: linear-gradient(#075e54, #128c7e, #25d366, #dcf8c6, #ece5dd);
+}
+
+.img{
+  cursor: zoom-in;
+  background-position: center;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+  @apply block w-full rounded-2xl;
+  @apply border py-2 px-4 bg-white my-2;
+}
+
+button[type="submit"], .submit{
+
 }
